@@ -22,9 +22,9 @@ def runCT():
     # [...] fetch settings from database
     
     return lg.runCT(s["ttCT_absolute"], 
-       self.s["ttCTcheckImax"], self.s["ttCTImin"],
-       self.s["ttCTImax"], self.s["ttCTInom"], self.s["ttCTItolpos"], 
-       self.s["ttCTItolneg"], self.s["forAutotest"])            
+       s["ttCTcheckImax"], s["ttCTImin"],
+       s["ttCTImax"], s["ttCTInom"], s["ttCTItolpos"], 
+       s["ttCTItolneg"], s["forAutotest"])            
 
 initLG()
 
