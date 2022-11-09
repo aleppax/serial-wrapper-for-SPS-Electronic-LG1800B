@@ -3,21 +3,21 @@ from serialLG1800 import serialLG1800 as slg
 lgport = 'socket://192.168.0.8:3800'
 lg = None
 
-def initLG(self):
+def initLG():
     lg = slg.LG1800(lgport)
     
-def fetchInputs(self):
+def fetchInputs():
     if lg.connected == True:
         # retrieve the status of external input used by the operator
         lg.inputLevels()
         # do something
         
-def riconnectLG(self, event=None):
+def riconnectLG(event=None):
     if lg.connected == False:
-        if lg.connect(self.lgport):
+        if lg.connect(lgport):
             fetchInputs()
 
-def runCT(self):
+def runCT():
     s = {}
     # [...] fetch settings from database
     
